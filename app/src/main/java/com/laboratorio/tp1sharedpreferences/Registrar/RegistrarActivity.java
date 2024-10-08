@@ -65,5 +65,15 @@ public class RegistrarActivity extends AppCompatActivity {
                 vm.registrar(usuario);
             }
         });
+
+        binding.btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegistrarActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Limpiar la pila de actividades
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
