@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(Usuario usuario) {
                 Toast.makeText(MainActivity.this, "Login Exitoso!! " + usuario.getNombre(), Toast.LENGTH_SHORT).show();
-                // Redirigir a la registrar para modificar perfil
+                // Redirigir a registrar para modificar perfil
                 Intent intent = new Intent(MainActivity.this, RegistrarActivity.class);
                 intent.putExtra("dni", usuario.getDni());
                 intent.putExtra("nombre", usuario.getNombre());
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("password", usuario.getPassword());
 
                 startActivity(intent);
-                finish(); // Cierra la actividad principal si no se desea regresar
+                finish();
             }
         });
 
