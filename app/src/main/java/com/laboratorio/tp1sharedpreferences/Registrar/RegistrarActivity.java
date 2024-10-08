@@ -24,6 +24,7 @@ public class RegistrarActivity extends AppCompatActivity {
         binding = ActivityRegistrarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //mostrar datos
         Intent intent = getIntent();
         Long dni = intent.getLongExtra("dni", -1);
         String apellido = intent.getStringExtra("apellido");
